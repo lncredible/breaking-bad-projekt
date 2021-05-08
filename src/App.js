@@ -1,9 +1,9 @@
 import './App.css';
-
+import Header from './components/ui/Header'
 const App = ()=> {
   return (
     <div className="container">
-      Hello
+      <Header/>
     </div>
   );
 }
