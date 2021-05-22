@@ -1,6 +1,8 @@
 import React from 'react'
 
-const CharacterItem = ({item}) => {
+
+//Lite styling till varje item (karaktär) från API. Använder card klass för att representera info
+const CharacterItem = ({item, onClick}) => {
     return (
         <div className='card'>
       <div className='card-inner'>
@@ -23,6 +25,13 @@ const CharacterItem = ({item}) => {
               <strong>Status:</strong> {item.status}
             </li>
           </ul>
+          <button
+          onClick={() => onClick(item)}
+          style={{ backgroundColor: "green", marginTop: "10px" }}
+          className="btn btn-primary"
+          >
+          Save to favourites
+        </button> 
         </div>
       </div>
     </div>

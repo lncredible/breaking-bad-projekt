@@ -97,7 +97,12 @@ header img {
 .search {
   height: 100px;
 }
-
+.btnFav{
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
 input[type='text'] {
   display: block;
   padding: 10px;
