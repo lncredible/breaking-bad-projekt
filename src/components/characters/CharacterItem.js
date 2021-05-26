@@ -27,8 +27,7 @@ const CharacterItem = ({item, onClick}) => {
           </ul>
           <button
           onClick={() => onClick(item)}
-          style={{ backgroundColor: "green", marginTop: "10px" }}
-          className="btn btn-primary"
+          className="btnSave"
           >
           Save to favourites
         </button> 

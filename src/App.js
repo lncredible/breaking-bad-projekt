@@ -22,10 +22,10 @@ const App = ()=> {
     
   }, [query]) //När query ändras körs den här metoden om
 
-  const saveCharacter = (item)=> { //Metod som sparar karaktär i local storage
+  const saveCharacter = (item)=> { //Metod som sparar en karaktär (item) i local storage
       const favChars = [...favourites];
       var index = favChars.indexOf(item)
-      if(index == -1){
+      if(index === -1){ //Kollar om karaktärer redan existerar som favorit // -1 betyder att karaktärer inte finns och då lägger vi till, om karaktärer redan finns behövs inte funktionalitet
         favChars.push(item)
         setFavourites(favChars)
         const jsonObj = JSON.stringify(favChars)
@@ -34,14 +34,13 @@ const App = ()=> {
       
       
   }
-  const showSavedCharacters = ()=>{ //Metod som visar sparade karaktärer i local storage
+  const showSavedCharacters = ()=>{ //Metod som visar de sparade karaktärer i local storage
     const jsonChars = localStorage.getItem("favourites")
     const parsedChars = JSON.parse(jsonChars);
-    if(!parsedChars){
-      return
+    if(parsedChars){ //Om det finns sparade karaktärer
+      setItems(parsedChars) //Detta är "main" funktionen efter vi har karaktärena i listan, då applikation lyssnar när items ändrar sin state så tar det hand om resten
     }
-    setItems(parsedChars)
-    setIsLoading(false)
+    
   }
   return (
     <div className="container">

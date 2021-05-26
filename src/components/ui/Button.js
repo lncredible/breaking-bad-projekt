@@ -3,8 +3,7 @@ import React from 'react'
 const Header = ({showCharacter}) => {
   return (
     <button
-            onClick={() => showCharacter()}
-          style={{ backgroundColor: "blue", marginTop: "10px" }}
+          onClick={() => showCharacter()}
           className="btnFav"
           >
           Show favourites

@@ -97,12 +97,24 @@ header img {
 .search {
   height: 100px;
 }
-.btnFav{
+.btnFav,
+.btnSave{
   color: #fff;
-  padding: 5px;
+  padding: 10px;
+  font-weight:bold;
   text-align: center;
   margin-bottom: 10px;
+  background-color: #006834;
+  border: none;
+  border-radius: 3%;
 }
+.btnFav:hover{
+  cursor: pointer;
+}
+.btnSave:hover{
+  cursor: pointer;
+}
+
 input[type='text'] {
   display: block;
   padding: 10px;
