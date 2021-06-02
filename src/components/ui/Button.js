@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Header = ({showCharacter}) => {
+const Header = ({showCharacter, text, cName}) => {
   return (
     <button
           onClick={() => showCharacter()}
-          className="btnFav"
+          className={cName}
           >
-          Show favourites
+          {text}
         </button> 
   )
 }

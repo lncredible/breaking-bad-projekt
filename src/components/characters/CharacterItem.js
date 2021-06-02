@@ -2,7 +2,7 @@ import React from 'react'
 
 
 //Lite styling till varje item (karaktär) från API. Använder card klass för att representera info
-const CharacterItem = ({item, onClick}) => {
+const CharacterItem = ({item, onClick, onDelete}) => {
     return (
         <div className='card'>
       <div className='card-inner'>
@@ -30,6 +30,12 @@ const CharacterItem = ({item, onClick}) => {
           className="btnSave"
           >
           Save to favourites
+        </button>
+        <button
+          onClick={() => onDelete(item)}
+          className="btnDelete"
+          >
+          Delete from favourites
         </button> 
         </div>
       </div>

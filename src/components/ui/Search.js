@@ -9,6 +9,8 @@ const Search = ({getQuery}) => {
         setText(q)
         getQuery(q) //Eftersom vi vill fetcha och visa nya resultat anropar vi getQuery(q) vilket kör om fetch metoden i App.js
     }
+
+
     return (
         <section className="search">
             <form>
